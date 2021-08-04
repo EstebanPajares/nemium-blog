@@ -85,3 +85,21 @@ pre {
   background-size: cover; */
   height: 350px;
 }
+
+/* counters */
+.section-content {
+  counter-reset: titleList;
+}
+.section-content h3 {
+  counter-increment: titleList;
+}
+.section-content h3::before {
+  content: counter(titleList, decimal)'. '; /* titleList es un nombre de la variable, puede ser cualquier nombre */
+}
+.section-content h3::after {
+  content: '';
+  width: 32px;
+  height: 4px;
+  background: var(--gray30);
+  display: inline-block;
+}
