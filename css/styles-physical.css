@@ -1,4 +1,3 @@
-@import './menu.css';
 @font-face{
   font-family: charter;
   src: url('../fonts/charter-regular.otf');
@@ -35,7 +34,8 @@
 body {
  color: var(--gray30);
  font-family: 'Roboto', sans-serif;
-  font-family: charter; */
+  /* font-family: charter; */
+  margin: 0;
 }
 
 a {
@@ -59,23 +59,56 @@ header a:hover{
 nav details summary {
   color: var(--gray10);
   font-weight: bold;
+  cursor: pointer;
+  outline: 0;
 }
 
 h1{
   font-size: 60px;
   /* font-size: 3.75em; */
+  margin-top: 64px; /* top right bottom left */
+  margin-bottom: 16px;
 }
 
+/* h1 + p {
+  background-color: #fec62e;
+  margin-bottom: 64px;
+} */
+
+hr {
+  margin: 64px 0;
+}
 h2 {
   font-size: 2em; /* 16* 2 = 32px */
+  margin: 64px 0 40px;
+  font-weight: normal;
 }
 
 h3 {
   font-size: 1.5em; /* 24px */
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-weight: normal;
 }
 
 pre {
   background: #fec62e;
+  padding: 40px;
+  font-family: 'Roboto';
+  line-height: 24px;
+}
+
+blockquote span {
+  color: var(--gray10);
+}
+blockquote span::before {
+  content: '-';
+}
+blockquote {
+  margin: 32px 0;
+  padding-left: 16px;
+  font-size: 24px;
+
 }
 
 .hero {
@@ -86,12 +119,40 @@ pre {
   height: 350px;
 }
 
+.section-content:nth-of-type(3) h3{
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+.section-content:nth-of-type(2) h3{
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+.section-content {
+  margin-top: 164px;
+}
+.section-content:first-of-type{
+  margin: 0;
+}
+.section-content ol li {
+  line-height: 24px; /* alto de linea */
+}
+.section-content ul li {
+  margin-bottom: 16px;
+}
+.section-content + hr{
+  display: none; /* se oculta el hr */
+}
+.section-content img{
+  margin-top: 40px;
+}
 /* counters */
 .section-content {
   counter-reset: titleList;
 }
 .section-content h3 {
   counter-increment: titleList;
+  padding-bottom: 4px;
+
 }
 .section-content h3::before {
   content: counter(titleList, decimal)'. '; /* titleList es un nombre de la variable, puede ser cualquier nombre */
