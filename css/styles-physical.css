@@ -31,11 +31,15 @@
   --gray40:#424242;
 }
 
+html {
+  scroll-behavior: smooth; /* estilo animado al navegar */
+}
+
 body {
- color: var(--gray30);
- font-family: 'Roboto', sans-serif;
-  /* font-family: charter; */
+  color: var(--gray30);
+  font-family: 'Roboto', sans-serif;
   margin: 0;
+  /* font-family: charter; */
 }
 
 a {
@@ -43,24 +47,31 @@ a {
 }
 
 header{
- font-size: 14px;
+  font-size: 14px;
+  width: 188px;
   color: var(--gray10);
+  position: absolute;  /*top, left, right, bottom, z-index: ; */
+  top: 64px;
+  left: -232px;
+  z-index: 1;
 }
 
-header a{
+header a {
   color: var(--gray10);
   text-decoration: none;
 }
 
-header a:hover{
+header a:hover {
   color: var(--gray);
+}
+header li{
+  margin-bottom: 16px;
 }
 
 nav details summary {
   color: var(--gray10);
   font-weight: bold;
-  cursor: pointer;
-  outline: 0;
+  line-height: 24px;
 }
 
 h1{
@@ -68,6 +79,12 @@ h1{
   /* font-size: 3.75em; */
   margin-top: 64px; /* top right bottom left */
   margin-bottom: 16px;
+  font-weight: normal;
+  /* border: 10px solid red;
+  width: 400px;
+  height: 400px;
+  padding: 40px;
+  box-sizing: border-box; */
 }
 
 /* h1 + p {
@@ -89,6 +106,9 @@ h3 {
   margin-top: 16px;
   margin-bottom: 24px;
   font-weight: normal;
+  position: sticky; /* relative */
+  top: 0;
+  background: white;
 }
 
 pre {
@@ -105,12 +125,33 @@ blockquote span::before {
   content: '-';
 }
 blockquote {
+  font-size: 24px;
   margin: 32px 0;
   padding-left: 16px;
-  font-size: 24px;
-
+  line-height: 24px;
+  border-left: 4px solid var(--gray30);
 }
 
+.header {
+  position: sticky;
+  top: 0;
+
+}
+.header-content {
+  position: relative;
+}
+
+.main {
+  /* position: relative; */
+  /* background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/pattern.png'); */
+}
+.wrapper{
+  width: 902px;
+  margin: auto;
+}
+.main-content{
+  background: white;
+}
 .hero {
   background: linear-gradient(to top, rgba(255, 255, 255, .3),transparent ), url('../images/pattern.svg');
   /*background-repeat: no-repeat;
@@ -129,6 +170,7 @@ blockquote {
 }
 .section-content {
   margin-top: 164px;
+  position: relative;
 }
 .section-content:first-of-type{
   margin: 0;
@@ -151,7 +193,7 @@ blockquote {
 }
 .section-content h3 {
   counter-increment: titleList;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
 
 }
 .section-content h3::before {
@@ -159,8 +201,11 @@ blockquote {
 }
 .section-content h3::after {
   content: '';
-  width: 32px;
+  width: 80px;
   height: 4px;
   background: var(--gray30);
   display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
