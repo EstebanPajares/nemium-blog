@@ -32,7 +32,7 @@
 }
 
 html {
-  scroll-behavior: smooth; /* estilo animado al navegar */
+  scroll-behavior: smooth; /* transición suave al navegar */
 }
 
 body {
@@ -64,14 +64,19 @@ header a {
 header a:hover {
   color: var(--gray);
 }
-header li{
-  margin-bottom: 16px;
-}
+
+/* summary::webkit-details-marker{
+  display: none;
+} */
 
 nav details summary {
   color: var(--gray10);
   font-weight: bold;
-  line-height: 24px;
+  line-height: ; /* 24px */
+}
+
+header li{
+  margin-bottom: 16px;
 }
 
 h1{
@@ -95,6 +100,7 @@ h1{
 hr {
   margin: 64px 0;
 }
+
 h2 {
   font-size: 2em; /* 16* 2 = 32px */
   margin: 64px 0 40px;
@@ -106,16 +112,24 @@ h3 {
   margin-top: 16px;
   margin-bottom: 24px;
   font-weight: normal;
-  position: sticky; /* relative */
-  top: 0;
+  position: relative; /* sticky */
+  /* top: 0; */
   background: white;
 }
 
 pre {
-  background: #fec62e;
+  background: #FEC62E;
   padding: 40px;
   font-family: 'Roboto';
   line-height: 24px;
+}
+
+blockquote {
+  font-size: 24px;
+  margin: 32px 0;
+  padding-left: 16px;
+  line-height: 24px;
+  border-left: 4px solid var(--gray30);
 }
 
 blockquote span {
@@ -123,13 +137,6 @@ blockquote span {
 }
 blockquote span::before {
   content: '-';
-}
-blockquote {
-  font-size: 24px;
-  margin: 32px 0;
-  padding-left: 16px;
-  line-height: 24px;
-  border-left: 4px solid var(--gray30);
 }
 
 .header {
@@ -142,7 +149,6 @@ blockquote {
 }
 
 .main {
-  /* position: relative; */
   /* background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/pattern.png'); */
 }
 .wrapper{
@@ -160,21 +166,25 @@ blockquote {
   height: 350px;
 }
 
-.section-content:nth-of-type(3) h3{
+.section-content {
+  margin-top: 164px;
+  position: relative;
+}
+
+.section-content:first-of-type {
+  margin: 0;
+}
+
+/* .section-content:nth-of-type(3) h3{
   margin-top: 40px;
   margin-bottom: 16px;
 }
 .section-content:nth-of-type(2) h3{
   margin-top: 40px;
   margin-bottom: 24px;
-}
-.section-content {
-  margin-top: 164px;
-  position: relative;
-}
-.section-content:first-of-type{
-  margin: 0;
-}
+} */
+
+
 .section-content ol li {
   line-height: 24px; /* alto de linea */
 }
@@ -191,6 +201,7 @@ blockquote {
 .section-content {
   counter-reset: titleList;
 }
+
 .section-content h3 {
   counter-increment: titleList;
   padding-bottom: 8px;
