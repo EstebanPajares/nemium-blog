@@ -237,3 +237,27 @@ blockquote p{
   background: #000;
   border: 1px solid #5551FF;
 }
+
+.form input{
+  inline-size: 100%; /* width */
+  border: 1px solid var(--white30);
+  background: #251F24 ;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding-inline: 16px;
+  padding-block: 12px;
+  color: var(--white30);
+  font-size: 16px;
+  display: block;
+  margin-block-end: 24px;
+}
+
+.form input::-webkit-input-placeholder{
+  color: var(--white20);
+}
+
+.form input[type="submit"]{
+  cursor: pointer;
+  background: #157EFB;
+  border: none;
+}
