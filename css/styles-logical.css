@@ -42,22 +42,20 @@ a {
   color: var(--white30);
 }
 .header {
-  position: sticky;
-  inset-block-start: -45px;
+  margin-block-start: 20px;
+  /* position: sticky;
+  inset-block-start: -45px; */
 }
 
 .header-content{
-  position: relative;
-  inset-block-start: 65px;
+  padding-inline: 20px;
+  /* position: relative;
+  inset-block-start: 65px; */
 }
 
 header{
   font-size: 14px;
   color: var(--white);
-  position: absolute;
-  inset-block-start: 0; /* top  */
-  inset-inline-start: -208px; /* let */
-  inline-size: 188px; /* width */
 }
 
 header li{
@@ -86,9 +84,8 @@ nav details summary {
   font-weight: normal;
 } */
 h1{
-  font-size: 60px;
-  /* font-size: 3.75em; */
-  margin-block-start: 64px;
+  font-size: 40px;
+  margin-block-start: 20px;
   margin-block-end: 16px;
 }
 
@@ -127,7 +124,7 @@ p{
   /*background-repeat: no-repeat;
   background-position:center;
   background-size: cover; */
-  height: 350px;
+  block-size: 50px; /* height */
 }
 
 .section-content img{
@@ -260,4 +257,31 @@ blockquote p{
   cursor: pointer;
   background: #157EFB;
   border: none;
+}
+
+@media screen and (min-width: 1366px){ /* Mobile first */
+  .hero{
+    block-size: 350px; /* height */
+  }
+  .header {
+    position: sticky;
+    inset-block-start: -45px;
+  }
+
+  .header-content{
+    position: relative;
+    inset-block-start: 65px;
+    padding-inline: 0;
+  }
+
+  header{
+    position: absolute;
+    inset-block-start: 0; /* top  */
+    inset-inline-start: -208px; /* let */
+    inline-size: 188px; /* width */
+  }
+  h1{
+    font-size: 60px;
+    margin-block-start: 64px;
+  }
 }
