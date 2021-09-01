@@ -23,18 +23,23 @@
   font-weight: 700;
 }
 :root {
-  font-size: 18px;
+  font-size: 16px;
+  --font-family: 'Nunito', sans-serif;
   --white30:white;
   --white20:#A5A3A5;
   --white10:#3A3539;
+  --verydark: #251F24;
+  --lightblue: #5551FF;
+  --vividblue: #157EFB;
+  --verysoftblue: #ABAAF6;
 }
 
 body {
   color: var(--white30);
   /* font-family: 'Roboto', sans-serif; */
-  font-family: 'Nunito', sans-serif;
+  font-family: var(--font-family);
   /* font-family: charter; */
-  background: #251F24;
+  background: var(--verydark);
   margin: 0;
 }
 
@@ -110,8 +115,8 @@ pre {
   padding: 40px;
   overflow: auto; /* genera un scroll */
   border-radius: 8px;
-  border: 10px solid #5551FF;
-  box-shadow: -10px 10px 0 0 #ABAAF6;
+  border: 10px solid var(--lightblue);
+  box-shadow: -10px 10px 0 0 var(--verysoftblue);
 }
 
 p{
@@ -228,17 +233,17 @@ blockquote p{
   border-radius: 50%;
 }
 .slider-bullet:active {
-  background: #5551FF;
+  background: var(--lightblue);
 }
 .slider-bullet:hover {
-  background: #000;
-  border: 1px solid #5551FF;
+  background: var(--verydark);
+  border: 1px solid var(--lightblue);
 }
 
 .form input{
   inline-size: 100%; /* width */
   border: 1px solid var(--white30);
-  background: #251F24 ;
+  background: var(--verydark) ;
   box-sizing: border-box;
   border-radius: 8px;
   padding-inline: 16px;
@@ -255,8 +260,29 @@ blockquote p{
 
 .form input[type="submit"]{
   cursor: pointer;
-  background: #157EFB;
+  background: var(--vividblue);
   border: none;
+}
+
+.footer{
+  background: var(--white30);
+}
+
+.footer-content{
+  padding-block: 42px;
+  text-align: center;
+}
+
+.footer-copyright{
+  color: var(--verydark);
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 43px;
+  margin-block-end: 1rem;
+}
+
+.social-media img{
+  margin-inline-end: 1rem;
 }
 
 @media screen and (min-width: 1366px){ /* Mobile first */
@@ -267,13 +293,11 @@ blockquote p{
     position: sticky;
     inset-block-start: -45px;
   }
-
   .header-content{
     position: relative;
     inset-block-start: 65px;
     padding-inline: 0;
   }
-
   header{
     position: absolute;
     inset-block-start: 0; /* top  */
