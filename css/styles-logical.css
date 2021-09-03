@@ -73,7 +73,8 @@ header a{
   text-decoration: none;
 }
 
-header a:hover{
+.nav-variants li:hover{
+  background: #000;
   color: var(--white);
 }
 
@@ -85,6 +86,22 @@ nav details summary {
   margin-block-end: 16px;
 }
 
+.nav-content a:hover{
+  color: white;
+  font-weight: bold;
+}
+
+nav{
+  margin-block-end: 4rem;
+}
+nav p{
+  text-transform: uppercase;
+  color: var(--white30);
+  margin-block-end: 1.5rem;
+}
+.menu-variants+li:hover{
+  background: var(--white20);
+}
 /* h1, h2, h3 {
   font-weight: normal;
 } */
@@ -184,7 +201,6 @@ blockquote p{
 }
 
 .main {
-  /* padding: 10px; */
 }
 
 .wrapper {
@@ -265,11 +281,12 @@ blockquote p{
 }
 
 .footer{
+  position: relative;
   background: var(--white30);
 }
 
 .footer-content{
-  padding-block: 42px;
+  padding-block: 24px;
   text-align: center;
 }
 
@@ -291,12 +308,13 @@ blockquote p{
   }
   .header {
     position: sticky;
-    inset-block-start: -45px;
+    inset-block-start: -35px;
   }
   .header-content{
     position: relative;
-    inset-block-start: 65px;
+    inset-block-start: 55px;
     padding-inline: 0;
+    padding-block-start: 0;
   }
   header{
     position: absolute;
@@ -304,6 +322,10 @@ blockquote p{
     inset-inline-start: -208px; /* let */
     inline-size: 188px; /* width */
   }
+  .main-content{
+    padding-block-start: 0;
+  }
+
   h1{
     font-size: 60px;
     margin-block-start: 64px;
