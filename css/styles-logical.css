@@ -75,7 +75,15 @@ header a{
 
 .nav-variants li:hover{
   background: #000;
-  color: var(--white);
+  color: white;
+  font-weight: bold;
+  border: 1px solid var(--lightblue);
+}
+
+.nav-variants li:nth-child(2){
+  background: #000;
+  color: white;
+  font-weight: bold;
 }
 
 nav details summary {
@@ -99,9 +107,15 @@ nav p{
   color: var(--white30);
   margin-block-end: 1.5rem;
 }
-.menu-variants+li:hover{
-  background: var(--white20);
+.menu-variants{
+  padding-inline-start: 0;
 }
+.menu-variants li{
+  margin: 0;
+  padding:8px;
+  list-style: none;
+}
+
 /* h1, h2, h3 {
   font-weight: normal;
 } */
@@ -278,6 +292,7 @@ blockquote p{
   cursor: pointer;
   background: var(--vividblue);
   border: none;
+  margin-block-end: 80px;
 }
 
 .footer{
@@ -308,7 +323,8 @@ blockquote p{
   }
   .header {
     position: sticky;
-    inset-block-start: -35px;
+    inset-block-start: -25px;
+    scroll-behavior: smooth;
   }
   .header-content{
     position: relative;
