@@ -28,6 +28,7 @@
   --gray20:#212429;
   --gray10:#616161;
   --gray40:#424242;
+  --back_footer:#212429;
 }
 
 html {
@@ -190,6 +191,7 @@ blockquote span::before {
 }
 .main-content{
   background: white;
+  padding:16px;
 }
 .hero {
   background: linear-gradient(to top, rgba(255, 255, 255, .3),transparent ), url('../images/pattern.svg');
@@ -261,4 +263,105 @@ blockquote span::before {
   position: absolute;
   left: 0;
   bottom: 0;
+}
+
+.slider-container{
+  display: block;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.video{
+  margin: 0;
+  display: inline-block;
+  inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 16/9;
+  border-radius: 4px;
+}
+
+.slider-bullet-list{
+  text-align: center;
+  margin-block-start: 10px;
+ /*  background: red; */
+}
+.slider-bullet{
+  display: inline-block;
+  background:rgba(66, 66, 66, 0.2);
+  inline-size: 20px;
+  block-size: 20px;
+  border-radius: 50%;
+}
+
+.slider-bullet:hover {
+  background: #212121;
+}
+
+.form{
+  display: flex;
+  /* background: red; */
+}
+.form input{
+  display: inline-block;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding:0.75rem  1rem;
+  margin: 0 1rem;
+  block-size: 48px;
+  color: #424242;
+  border: 1px solid #616161;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 90px;
+}
+
+.form input[type="text"]{
+  inline-size: 280px;
+}
+
+.form input[type="email"]{
+  inline-size: 337px;
+}
+
+.form button{
+  position:relative;
+  cursor: pointer;
+  background: #000;
+  color: #fff;
+  inline-size: 119px;
+  inset-inline-start: -119px;
+  border-radius: 90px;
+  border: none;
+}
+
+.section-content:last-child{
+  margin-block-start: 40px;
+  margin-block-end: 113px;
+}
+
+.footer{
+  background: var(--back_footer);
+}
+
+.footer-content{
+  padding: 48px 0;
+}
+
+.footer-copyright, .social-media{
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+}
+
+.footer-copyright{
+  font-size: 2rem;
+  line-height: 2.34rem;
+  margin-bottom: 1rem;
+}
+.social-media a{
+  margin-inline-end: 1rem;
 }
