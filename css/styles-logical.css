@@ -96,7 +96,7 @@ nav details summary {
 }
 
 .nav-content a:hover{
-  color: white;
+  color: var(--white20);
   font-weight: bold;
 }
 
@@ -194,6 +194,7 @@ p{
   font-size: 17px;
   line-height: 24px;
 }
+
 blockquote {
   /* margin: 0; */
   margin-block-start: 80px;
@@ -297,24 +298,26 @@ blockquote p{
 }
 
 .footer{
-  position: relative;
   background: var(--white30);
 }
 
 .footer-content{
-  padding-block: 24px;
+  padding: 48px 0;
+}
+
+.footer-copyright, .social-media{
+  color: var(--verydark);
+  margin: 0;
   text-align: center;
 }
 
 .footer-copyright{
-  color: var(--verydark);
-  font-weight: normal;
   font-size: 2rem;
-  line-height: 43px;
+  line-height: 2.34rem;
   margin-block-end: 1rem;
 }
 
-.social-media img{
+.social-media a{
   margin-inline-end: 1rem;
 }
 
