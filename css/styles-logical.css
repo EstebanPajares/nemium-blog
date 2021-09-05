@@ -91,6 +91,7 @@ nav details summary {
   font-weight: bold;
   cursor: pointer;
   outline: 0;
+  margin-block-start: 24px;
   margin-block-end: 16px;
 }
 
