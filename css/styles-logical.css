@@ -94,14 +94,16 @@ nav details summary {
   margin-block-start: 24px;
   margin-block-end: 16px;
 }
-
+nav details summary:hover{
+  color: var(--white20);
+}
 .nav-content a:hover{
   color: var(--white20);
   font-weight: bold;
 }
 
 nav{
-  margin-block-end: 4rem;
+  margin-block-end: 2rem;
 }
 nav p{
   text-transform: uppercase;
@@ -327,7 +329,7 @@ blockquote p{
   }
   .header {
     position: sticky;
-    inset-block-start: -25px;
+    inset-block-start: -55px;
     scroll-behavior: smooth;
   }
   .header-content{

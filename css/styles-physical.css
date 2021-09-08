@@ -45,15 +45,29 @@ body {
 a {
   color: var(--gray30);
 }
+.header {
+  margin-block-start: 20px ;
+  /* position: sticky;
+  top: 0; */
+
+}
+
+.header-content {
+  padding-inline: 20px;
+  /* position: relative; */
+}
 
 header{
   font-size: 14px;
-  width: 188px;
   color: var(--gray10);
-  position: absolute;  /*top, left, right, bottom, z-index: ; */
-  top: 64px;
-  left: -232px;
-  z-index: 1;
+  /* width: 188px;
+  position: absolute; */  /*top, left, right, bottom, z-index: ; */
+ /*  top: 64px;
+  left: -208px;
+  z-index: 1; */
+}
+header li{
+  margin-bottom: 16px;
 }
 
 header a {
@@ -77,7 +91,7 @@ header a:hover {
 }
 .menu-variants{
   padding-inline-start: 0;
-  margin-block-end: 4rem;
+  margin-block-end: 2rem;
 }
 .nav-variants li{
   margin: 0;
@@ -85,16 +99,10 @@ header a:hover {
   list-style: none;
 }
 nav p{
-  margin: 0;
   text-transform: uppercase;
   color: #000;
   margin-block-end: 1rem;
   line-height: 24px;
-}
-
-.nav-content a:hover{
-  color: #000;
-  font-weight: bold;
 }
 
 /* summary::webkit-details-marker{
@@ -105,19 +113,22 @@ nav details summary {
   color: var(--gray10);
   font-weight: bold;
   line-height: 24px;
+  outline: 0;
   margin-block-start: 24px;
   margin-block-end: 16px;
+  cursor: pointer;
 }
 
-header li{
-  margin-bottom: 16px;
+.nav-content a:hover{
+  color: #000;
+  font-weight: bold;
 }
+
 
 h1{
-  font-size: 60px;
-  /* font-size: 3.75em; */
-  margin-top: 64px; /* top right bottom left */
-  margin-bottom: 16px;
+  font-size: 40px;
+  margin-block-start: 20px; /* top right bottom left */
+  margin-block-end: 16px;
   font-weight: normal;
   /* border: 10px solid red;
   width: 400px;
@@ -132,23 +143,23 @@ h1{
 } */
 
 hr {
-  margin: 64px 0;
+  margin-block: 40px;
 }
 
 h2 {
   font-size: 2em; /* 16* 2 = 32px */
-  margin: 64px 0 40px;
+  margin-block: 40px;
   font-weight: normal;
 }
 
 h3 {
   font-size: 1.5em; /* 24px */
-  margin-top: 16px;
-  margin-bottom: 24px;
-  font-weight: normal;
-  position: relative; /* sticky */
+  font-style: normal;
+  font-weight: 600;
+  position: relative;
   /* top: 0; */
   background: white;
+  margin-block: 16px;
 }
 
 pre {
@@ -156,6 +167,8 @@ pre {
   padding: 40px;
   font-family: 'Roboto';
   line-height: 24px;
+  overflow: hidden;
+  border:none;
 }
 
 blockquote {
@@ -173,20 +186,13 @@ blockquote span::before {
   content: '-';
 }
 
-.header {
-  position: sticky;
-  top: 0;
 
-}
-.header-content {
-  position: relative;
-}
 
 .main {
   /* background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/pattern.png'); */
 }
 .wrapper{
-  width: 902px;
+  max-inline-size: 902px;
   margin: auto;
 }
 .main-content{
@@ -201,10 +207,10 @@ blockquote span::before {
   height: 350px;
 }
 
-.section-content {
-  margin-top: 164px;
+/* .section-content {
+  margin-top: 64px;
   position: relative;
-}
+} */
 
 .section-content:first-of-type {
   margin: 0;
@@ -220,7 +226,9 @@ blockquote span::before {
   display: none; /* se oculta el hr */
 }
 .section-content img{
-  margin-top: 40px;
+  margin-block-start: 40px;
+  display: block;
+  max-inline-size: 100%;
 }
 /* counters */
 .section-content {
@@ -320,11 +328,11 @@ blockquote span::before {
 }
 
 .form input[type="text"]{
-  inline-size: 280px;
+  inline-size: 40%;
 }
 
 .form input[type="email"]{
-  inline-size: 337px;
+  inline-size: 60%;
 }
 
 .form button{
@@ -332,8 +340,8 @@ blockquote span::before {
   cursor: pointer;
   background: #000;
   color: #fff;
-  inline-size: 119px;
-  inset-inline-start: -119px;
+  inline-size: 25%;
+  inset-inline-start: -99px;
   border-radius: 90px;
   border: none;
 }
@@ -364,4 +372,35 @@ blockquote span::before {
 }
 .social-media a{
   margin-inline-end: 1rem;
+}
+
+
+@media screen and (min-width: 1366px) {
+  .hero{
+    block-size: 350px;
+  }
+  .header{
+    position: sticky;
+    inset-block-start: -55px;
+    scroll-behavior: smooth;
+  }
+  .header-content{
+    position: relative;
+    inset-block-start: 55px;
+    padding-inline: 0;
+    padding-block-start: 0;
+  }
+  header{
+    position: absolute;
+    inset-block-start: 0px;
+    inset-inline-start:-208px;
+    inline-size: 188px;
+  }
+  .main-content{
+    padding-block-start: 0;
+  }
+  h1{
+    font-size: 60px;
+    margin-block-start: 64px;
+  }
 }
