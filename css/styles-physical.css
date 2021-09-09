@@ -204,7 +204,7 @@ blockquote span::before {
   /*background-repeat: no-repeat;
   background-position:center;
   background-size: cover; */
-  height: 350px;
+  height: 50px;
 }
 
 /* .section-content {
@@ -293,57 +293,66 @@ blockquote span::before {
 .slider-bullet-list{
   text-align: center;
   margin-block-start: 10px;
- /*  background: red; */
 }
 .slider-bullet{
   display: inline-block;
   background:rgba(66, 66, 66, 0.2);
   inline-size: 20px;
   block-size: 20px;
+  border: 1px solid rgba(66, 66, 66, 0.2);
   border-radius: 50%;
+  box-sizing: border-box;
+/*   margin-inline: 5px; */
 }
 
 .slider-bullet:hover {
   background: #212121;
 }
 
+.email{
+  font-weight: bold;
+}
+
 .form{
-  display: flex;
-  /* background: red; */
 }
 .form input{
-  display: inline-block;
+  inline-size: 100%;
   border: none;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
   padding:0.75rem  1rem;
-  margin: 0 1rem;
   block-size: 48px;
   color: #424242;
   border: 1px solid #616161;
   outline: none;
   box-sizing: border-box;
   border-radius: 90px;
+  margin-block-end: 1rem;
 }
 
 .form input[type="text"]{
-  inline-size: 40%;
+  inline-size: 100%;
+  display: block;
 }
 
 .form input[type="email"]{
-  inline-size: 60%;
+  inline-size: 100%;
+  margin-block-end: 0;
 }
 
-.form button{
+.button{
   position:relative;
   cursor: pointer;
   background: #000;
   color: #fff;
-  inline-size: 25%;
-  inset-inline-start: -99px;
+  inline-size: 30%;
+  inset-block-end: 48px;
+  inset-inline-end: -70%;
   border-radius: 90px;
   border: none;
+  block-size: 48px;
+  box-sizing: border-box;
 }
 
 .section-content:last-child{
