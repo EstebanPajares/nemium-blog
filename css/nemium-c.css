@@ -39,7 +39,6 @@ body {
   color: var(--gray30);
   font-family: 'Roboto', sans-serif;
   margin: 0;
-  /* font-family: charter; */
 }
 
 a {
@@ -84,7 +83,7 @@ header a:hover {
   font-weight: bold;
   border: 1px solid #5551FF;
 }
-.nav-variants li:first-child{
+.nav-variants li:nth-child(3){
   background: #000;
   color: white;
   font-weight: bold;
@@ -92,6 +91,10 @@ header a:hover {
 .menu-variants{
   padding-inline-start: 0;
   margin-block-end: 2rem;
+}
+.nav-variants{
+  /* outline: blue; */
+  margin-block: 40px;
 }
 .nav-variants li{
   margin: 0;
@@ -101,6 +104,7 @@ header a:hover {
 nav p{
   text-transform: uppercase;
   color: #000;
+  margin-block-start: 0;
   margin-block-end: 1rem;
   line-height: 24px;
 }
@@ -119,6 +123,12 @@ nav details summary {
   cursor: pointer;
 }
 
+.nav-content>details{
+  /* background-color: red; */
+  border-inline-start: 4px solid #C4C4C4;
+  padding-inline-start: 1rem;
+}
+
 .nav-content a:hover{
   color: #000;
   font-weight: bold;
@@ -126,10 +136,12 @@ nav details summary {
 
 
 h1{
-  font-size: 40px;
-  margin-block-start: 20px; /* top right bottom left */
+  font-size: 32px;
+  margin-block-start: 40px; /* top right bottom left */
   margin-block-end: 16px;
-  font-weight: normal;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 37.5px;
   /* border: 10px solid red;
   width: 400px;
   height: 400px;
@@ -144,18 +156,20 @@ h1{
 
 hr {
   margin-block: 40px;
+  border: 1px solid rgba(97, 97, 97, 0.2);
 }
 
 h2 {
   font-size: 2em; /* 16* 2 = 32px */
   margin-block: 40px;
-  font-weight: normal;
+  font-weight: 400;
+  line-height: 37.5px;
 }
 
 h3 {
   font-size: 1.5em; /* 24px */
   font-style: normal;
-  font-weight: 600;
+  font-weight: normal;
   position: relative;
   /* top: 0; */
   background: white;
@@ -163,12 +177,13 @@ h3 {
 }
 
 pre {
-  background: #FEC62E;
-  padding: 40px;
+  background: #E5E5E5;
+  padding: 1rem;
   font-family: 'Roboto';
+  font-style: normal;
   line-height: 24px;
   overflow: hidden;
-  border:none;
+  border-radius: 8px;
 }
 
 blockquote {
@@ -180,7 +195,7 @@ blockquote {
 }
 
 blockquote span {
-  color: var(--gray10);
+  color: var(--gray20);
 }
 blockquote span::before {
   content: '-';
@@ -199,13 +214,10 @@ blockquote span::before {
   background: white;
   padding:16px;
 }
-.hero {
+/* .hero {
   background: linear-gradient(to top, rgba(255, 255, 255, .3),transparent ), url('../images/pattern.svg');
-  /*background-repeat: no-repeat;
-  background-position:center;
-  background-size: cover; */
   height: 50px;
-}
+} */
 
 /* .section-content {
   margin-top: 64px;
@@ -243,7 +255,7 @@ blockquote span::before {
 .section-content h3::before {
   content: counter(titleList, decimal)'. '; /* titleList es un nombre de la variable, puede ser cualquier nombre */
 }
-.section-content h3::after {
+/* .section-content h3::after {
   content: '';
   width: 80px;
   height: 4px;
@@ -252,7 +264,7 @@ blockquote span::before {
   position: absolute;
   left: 0;
   bottom: 0;
-}
+} */
 .section-content:nth-of-type(2) h3{
   margin-top: 40px;
   margin-bottom: 24px;
@@ -314,6 +326,8 @@ blockquote span::before {
 }
 
 .form{
+  /* margin-block-start: 40px;
+  margin-block-end: 40px; */
 }
 .form input{
   inline-size: 100%;
@@ -357,7 +371,7 @@ blockquote span::before {
 
 .section-content:last-child{
   margin-block-start: 40px;
-  margin-block-end: 80px;
+  margin-block-end: 40px;
 }
 
 .footer{
@@ -385,15 +399,12 @@ blockquote span::before {
 
 
 @media screen and (min-width: 1366px) {
-  .hero{
-    block-size: 350px;
-  }
-  .header{
+  /* .header{
     position: sticky;
     inset-block-start: -55px;
     scroll-behavior: smooth;
-  }
-  .header-content{
+  } */
+  /* .header-content{
     position: relative;
     inset-block-start: 55px;
     padding-inline: 0;
@@ -404,17 +415,27 @@ blockquote span::before {
     inset-block-start: 0px;
     inset-inline-start:-208px;
     inline-size: 188px;
+  }*/
+  .nav-variants{
+    inline-size: 280px;
+    margin-block-start: 64px;
+    margin-block-end: 104px;
   }
+  pre{
+    padding: 2.5rem;
+  }
+  /*
   .main-content{
     padding-block-start: 0;
-  }
+  }*/
   h1{
     font-size: 60px;
-    margin-block-start: 64px;
+    line-height: 70px;
+    margin-block-start: 80px;
+
   }
   .section-content:last-child{
-      margin-block-start: 40px;
-      margin-block-end: 80px;
-    }
+    margin-block-start: 40px;
+    margin-block-end: 80px;
   }
 }
