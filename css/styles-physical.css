@@ -162,6 +162,11 @@ h3 {
   margin-block: 16px;
 }
 
+h3 p{
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
 pre {
   background: #FEC62E;
   padding: 40px;
