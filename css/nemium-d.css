@@ -31,13 +31,6 @@
   --white: #FFFFFF;
   --gray: #545454;
   --pink: rgba(142, 45, 226, 0.5);
-
-
-  --gray30:#212121;
-  --gray20:#212429;
-  --gray10:#616161;
-  --gray40:#424242;
-  --back_footer:#000000;
 }
 
 html {
@@ -126,8 +119,21 @@ nav details summary {
   cursor: pointer;
 }
 
+.nav-content li{
+  margin: 1rem 0;
+  padding: 8px;
+  color: var(--gray);
+}
+
+.nav-content li:first-of-type{
+  background: var(--light-blue);
+}
+
+.nav-content details ol li:hover{
+  background: var(--light-blue);
+}
 .nav-content a:hover{
-  color:var(--black);
+  color:var(--white);
   font-weight: bold;
 }
 
@@ -158,19 +164,21 @@ hr {
 }
 
 h2 {
-  font-size: 2em; /* 16* 2 = 32px */
+  font-size: 2rem; /* 16* 2 = 32px */
   margin-block: 40px;
   font-weight: normal;
+  line-height: 38px;
 }
 
 h3 {
   font-size: 1.5em; /* 24px */
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   position: relative;
   /* top: 0; */
   background: white;
   margin-block: 16px;
+  line-height: 28.44px;
 }
 
 h3 p{
@@ -178,7 +186,9 @@ h3 p{
   font-weight: 400;
   line-height: 24px;
 }
-
+span{
+  color: var(--light-blue);
+}
 p{
   text-align: center;
 }
@@ -187,6 +197,7 @@ h1, h2, h3{
   text-align: center;
   color: var(--black);
 }
+
 pre {
   background: var(--white);
   color: var(--black);
@@ -201,16 +212,18 @@ pre {
 }
 
 blockquote {
-  text-align: left;
+  text-align: center;
   font-size: 24px;
-  margin: 40px 0px;
+  margin: 40px 100px;
   padding-left: 16px;
   line-height: 32px;
   border-left: 4px solid var(--light-blue);
   color: var(--black);
 }
-
-blockquote span {
+blockquote p{
+  text-align: start;
+}
+blockquote span{
   color: var(--black);
 }
 blockquote span::before {
@@ -293,7 +306,22 @@ blockquote span::before {
   left: 0;
   bottom: 0;
 }
-
+.caja h3, p{
+  text-align: left;
+}
+.caja ul li{
+  list-style: none;
+}
+.caja ul li:before{
+  content: "";
+  font-weight: bold;
+  display: inline-block;
+  background-color: var(--light-blue);
+  inline-size: 0.5rem;
+  block-size: 0.5rem;
+  border-radius: 50%;
+  margin-inline-end: 16px;
+}
 .slider-container{
   display: block;
   overflow: hidden;
@@ -317,21 +345,25 @@ blockquote span::before {
 }
 .slider-bullet{
   display: inline-block;
-  background:rgba(66, 66, 66, 0.2);
+  background:var(--pink);
   inline-size: 20px;
   block-size: 20px;
-  border: 1px solid rgba(66, 66, 66, 0.2);
   border-radius: 50%;
   box-sizing: border-box;
 /*   margin-inline: 5px; */
 }
 
 .slider-bullet:hover {
-  background: #212121;
+  background:var(--light-blue);
 }
 
 .email{
   font-weight: bold;
+}
+.subtit{
+  margin: 16px 0px;
+  text-align: left;
+  font-size: 1.5rem;
 }
 
 .form{
