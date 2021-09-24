@@ -1,0 +1,343 @@
+@font-face{
+  font-family: charter;
+  src: url('../fonts/charter-regular.otf');
+  font-style: normal ;
+  font-weight: 400;
+}
+@font-face{
+  font-family: charter;
+  src: url('../fonts/charter-italic.otf');
+  font-style: italic ;
+  font-weight: 400;
+}
+@font-face{
+  font-family: charter;
+  src: url('../fonts/charter-bold.otf');
+  font-style: normal ;
+  font-weight: 700;
+}
+@font-face{
+  font-family: charter;
+  src: url('../fonts/charter-bold-italic.otf');
+  font-style: italic ;
+  font-weight: 700;
+}
+:root {
+  font-size: 16px;
+  --font-family: 'Nunito', sans-serif;
+  --black: #000;
+  --white30:white;
+  --white20:#A5A3A5;
+  --white10:#3A3539;
+  --verydark: #232946;
+  --lightblue: #5551FF;
+  --vividblue: #157EFB;
+  --verysoftblue: #ABAAF6;
+  --pink: #D4939D;
+}
+
+body {
+  color: var(--white30);
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: var(--font-family);
+  /* font-family: charter; */
+  background: var(--verydark);
+  margin: 0;
+}
+
+a {
+  color: var(--white30);
+}
+.header {
+  margin-block-start: 20px;
+  /* position: sticky;
+  inset-block-start: -45px; */
+}
+
+.header-content{
+  padding-inline: 20px;
+  /* position: relative;
+  inset-block-start: 65px; */
+}
+
+header{
+  font-size: 14px;
+  color: var(--white);
+}
+
+header li{
+  color: var(--white20);
+  margin-block-end: 16px; /* margin-bottom */
+}
+
+header a{
+  color: var(--white20);
+  text-decoration: none;
+}
+
+.nav-variants li:hover{
+  background: #000;
+  color: white;
+  font-weight: bold;
+  border: 1px solid var(--lightblue);
+}
+
+.nav-variants li:nth-child(5){
+  background: #000;
+  color: white;
+  font-weight: bold;
+}
+
+nav details summary {
+  color: var(--white30);
+  font-weight: bold;
+  cursor: pointer;
+  outline: 0;
+  margin-block-start: 24px;
+  margin-block-end: 16px;
+}
+nav details summary:hover{
+  color: var(--white20);
+}
+.nav-content a:hover{
+  color: var(--white20);
+  font-weight: bold;
+}
+
+nav{
+  margin-block-end: 2rem;
+}
+nav p{
+  text-transform: uppercase;
+  color: var(--white30);
+  margin-block-end: 1.5rem;
+}
+.menu-variants{
+  padding-inline-start: 0;
+}
+.menu-variants li{
+  margin: 0;
+  padding:8px;
+  list-style: none;
+}
+
+/* h1, h2, h3 {
+  font-weight: normal;
+} */
+h1{
+  font-size: 40px;
+  margin-block-start: 20px;
+  margin-block-end: 16px;
+}
+
+h2 {
+  font-size: 2em; /* 16* 2 = 32px */
+  margin-block: 40px;
+}
+
+h3 {
+  font-size: 1.5em; /* 24px */
+  font-style: normal;
+  font-weight: 600;
+  margin-block: 16px;
+}
+
+hr {
+  margin-block: 40px;
+  border-color: rgba(97, 97, 97, 0.2);
+}
+pre {
+  padding: 40px;
+  overflow: auto; /* genera un scroll */
+  border-radius: 8px;
+  border: 10px solid var(--pink);
+  box-shadow: -10px 10px 0 0 var(--verysoftblue);
+}
+
+p{
+  color: var(--white20);
+}
+
+.section-content img{
+  margin-block-start: 40px;
+  display: block; /* para que colapse con el h3 */
+  max-inline-size: 100%; /* max-width */
+}
+/* counters */
+.section-content {
+  counter-reset: titleList;
+}
+.section-content h3 {
+  counter-increment: titleList;
+}
+.section-content h3::before {
+  content: counter(titleList, decimal)'. '; /* titleList es un nombre de la variable, puede ser cualquier nombre */
+}
+/* .section-content h3::after {
+  content: '';
+  width: 32px;
+  height: 4px;
+  background: var(--white30);
+  display: inline-block;
+} */
+
+.section-content li{
+  color: var(--white20);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+blockquote {
+  /* margin: 0; */
+  margin-block-start: 80px;
+  margin-block-end: 63px;
+  background-color: var(--pink);
+  border-radius: 8px;
+  line-height: 32px;
+  font-size: 24px;
+  padding: 24px;
+  /* padding-inline-start: 24px;
+  padding-inline-end: 24px;
+  padding-block-start: 24px;
+  padding-block-end: 24px; */
+}
+blockquote p{
+  color: var(--black);
+}
+.main hr:nth-of-type(2){
+  display: none;
+}
+
+.main {
+}
+
+.wrapper {
+  max-inline-size: 902px;
+  /*   overflow: hidden; /* Oculta el contenido que desborda el contenedor */
+  /*overflow: auto; /* Activa el Scrooll */
+  margin: auto;
+}
+
+.main-content{
+  padding: 16px;
+}
+
+/* ------------------------- */
+.slider{
+ /*  border: 1px solid red; */
+}
+
+.slider-container{
+  /* block-size: 100px;  *//* height */
+  display: block;
+  overflow: hidden; /* Para ocultar el scroll */
+  scroll-behavior: smooth; /* transicion*/
+  white-space: nowrap; /* No pasar a la siguiente línea */
+  font-size: 0;
+}
+
+.video{
+  margin: 0;
+  /* border: 2px solid blue; */
+  display: inline-block;
+  inline-size: 100%;/* width */
+  block-size: auto;
+  aspect-ratio: 16/9;
+  border-radius: 4px;
+}
+.slider-bullet-list {
+  text-align: center;
+  margin-block-start: 10px; /* top */
+}
+.slider-bullet {
+  display: inline-block;
+  inline-size: 20px;
+  block-size: 20px;
+  background: white;
+  border-radius: 50%;
+}
+.slider-bullet:active {
+  background: var(--lightblue);
+}
+.slider-bullet:hover {
+  background: var(--pink);
+}
+
+.form input{
+  inline-size: 100%; /* width */
+  border: 1px solid var(--white30);
+  background: var(--verydark) ;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding-inline: 16px;
+  padding-block: 12px;
+  color: var(--white30);
+  font-size: 16px;
+  display: block;
+  margin-block-end: 24px;
+}
+
+.form input::-webkit-input-placeholder{
+  color: var(--white20);
+}
+
+.form input[type="submit"]{
+  cursor: pointer;
+  background: var(--pink);
+  border: none;
+  margin-block-end: 80px;
+}
+
+.footer{
+  background: var(--pink);
+}
+
+.footer-content{
+  padding: 48px 0;
+}
+
+.footer-copyright, .social-media{
+  color: var(--verydark);
+  margin: 0;
+  text-align: center;
+}
+
+.footer-copyright{
+  font-size: 2rem;
+  line-height: 2.34rem;
+  margin-block-end: 1rem;
+}
+
+.social-media a{
+  margin-inline-end: 1rem;
+}
+
+@media screen and (min-width: 1366px){ /* Mobile first */
+  .header {
+    position: sticky;
+    inset-block-start: -55px;
+    scroll-behavior: smooth;
+  }
+  .header-content{
+    position: relative;
+    inset-block-start: 55px;
+    padding-inline: 0;
+    padding-block-start: 0;
+  }
+  header{
+    position: absolute;
+    inset-block-start: 0; /* top  */
+    inset-inline-start: -208px; /* let */
+    inline-size: 188px; /* width */
+  }
+  .main-content{
+    padding-block-start: 0;
+  }
+
+  h1{
+    font-size: 60px;
+    margin-block-start: 64px;
+  }
+}

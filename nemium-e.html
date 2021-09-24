@@ -6,17 +6,14 @@
     <meta name="Description" content="El blog de Esteban Pajares">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/nemium-d.css">
+    <link rel="stylesheet" href="./css/nemium-e.css">
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"> -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@0,400;0,500;0,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet">
     <title>El Blog de Esteban</title>
     <meta property="og:title" content="Proyecto: Blog del curso Esencial de HTMl y CSS" />
     <meta property="og:type" content="website" />
@@ -50,7 +47,7 @@
         <div class="header-content">
           <header>
             <nav class="nav-variants">
-              <p>Variantes</p>
+              <p>Variantes del Blog</p>
               <ul class="menu-variants">
                 <li><a href="index.html"> Nemium A</a></li>
                 <li><a href="nemium-b.html"> Nemium B</a></li>
@@ -72,7 +69,7 @@
                   <li><a href="#github">GitHub</a></li>
                 </ol>
               </details>
-              <details>
+              <details open>
                 <summary>
                   Conceptos esenciales del Desarrollo Web
                 </summary>
@@ -103,22 +100,22 @@
             <h2>
               Setup
             </h2>
-            <img src="./images/google-chrome.png" alt="Logo de Google Chrome" title="Logo del navegador Google Chrome">
+            <img src="./icons/chrome.svg" alt="Logo de Google Chrome" title="Logo del navegador Google Chrome">
             <h3 id="google-chrome">Google Chrome</h3>
             <p>
-              Chrome va a <span>ser el navegador que utilizaremos </span> en el curso por su extenso soporte de nuevos estándares y herramientas de
+              Chrome va a ser el navegador que utilizaremos en el curso por su extenso soporte de nuevos estándares y herramientas de
               desarrollo avanzadas y de amigable uso.
             </p>
-            <img src="./images/visual-studio-code.png" alt="Logo de Visual Studio Code" title="Logo de Visual Studio Code">
+            <img src="./icons/visualstudiocode.svg" alt="Logo de Visual Studio Code" title="Logo de Visual Studio Code">
             <h3 id="vs-code">Visual Studio Code</h3>
             <p>Visual Studio Code es el editor de texto más popular y potente del mercado actualmente, su fácil uso y la capacidad de
             extenderlo por medio de plugins lo hace el complemento perfecto para cualquier programador sin importar el lenguaje en
             el que se desemvuelva.</p>
-            <img src="./images/figma.png" alt="logo de figma" title="logo de figma">
+            <img src="./icons/figma.svg" alt="logo de figma" title="logo de figma">
             <h3 id="figma">Figma</h3>
             <p>Figma es una la herramienta más popular en la actualidad para entregar diseños a los desarrolladores para su
-            implementación por su <span> fácil uso </span> porque puede ser usado directamente desde el navegador.</p>
-            <img src="./images/github.png" alt="logo de github" title="logo de gitHub">
+            implementación por su fácil uso porque puede ser usado directamente desde el navegador.</p>
+            <img src="./icons/github.svg" alt="logo de github" title="logo de gitHub">
             <h3 id="github">GitHub</h3>
             <p>Así como en Facebook te encuentran tus amigos, en Github te encuentran otras programadoras y programadores de todo el
             mundo, en vez de subir fotos de tus viajes aquí subes tu código y puedes elegir hacerlo “open source” o guardarlo de
@@ -167,7 +164,7 @@
             <p>El Document Object Model es una estructura de árbol que representará todos nuestros proyectos web como si un árbol
             genealógico fuera: padres, hijos, hermanos con niveles infinitos. cuando entendemos esta anidación podemos identificar
             dependencias, herencias en css y que tan complejo es nuestro proyecto.</p>
-            <img src="./images/dom.png" alt="estructura del árbol que representa al document object model" title="estructura del árbol que representa al document object model">
+            <img src="./images/dom.png" alt="Estructura del árbol que representa al Document Object Model">
 
             <h3 id="semantica">Semantica</h3>
             <p>La semántica le brinda sentido a cada elemento existen en un sitio web, algunos elementos será meramente decorativos y
@@ -182,9 +179,9 @@
             <h3 id="css">CSS</h3>
             <p>Hojas de Estilo en Cascada (del inglés Cascading Style Sheets) o CSS es el lenguaje de estilos utilizado para describir
             la presentación de documentos HTML</p>
-            <img src="./images/css.png" alt="estructura del component style cascade" title="estructura del component style cascade">
+            <img src="./images/css.png" alt="estructura del component style cascade">
           </section>
-          <section class="section-content caja">
+          <section class="section-content">
             <h2>Modelo de caja</h2>
             <h3>El modelo de caja está compuesto por:</h3>
             <p>Chrome va a ser el navegador que utilizaremos en el curso por su extenso soporte de nuevos estándares y herramientas de
@@ -213,7 +210,7 @@
             </ul>
           </section>
           <div class="section-content">
-            <h2 class="subtit">Algunos vídeos que pueden servirte:</h2>
+            <h2>Algunos vídeos que pueden servite para crear notas:</h2>
             <div class="slider">
               <scroll-container class="slider-container">
                 <scroll-page class="slider-slide" id="video-1">
@@ -241,15 +238,14 @@
           </div>
           <p>
             Si deseas trabajar algún proyecto, escríbeme a:
-            <a class="email" href="mailto:jehupajares@gmail.com">jehupajares@gmail.com</a>
+            <a href="mailto:jehupajares@gmail.com">jehupajares@gmail.com</a>
           </p>
           <div class="section-content">
-            <h2 class="subtit">Suscr&iacutebete a nuestro newsletter</h2>
+            <h2>Suscr&iacutebete a nuestro newsletter</h2>
             <form action="#" class="form">
               <input type="text" required placeholder="Nombre">
               <input type="email" required placeholder="Correo electrónico">
-              <button class="button" type="submit">Suscribirme</button>
-              <!-- <input type="submit" value="Suscribirme"> -->
+              <input type="submit" value="Suscribirme">
             </form>
           </div>
         </div>
@@ -257,10 +253,10 @@
     </main>
     <footer class="footer">
       <div class="footer-content">
-        <p class="footer-copyright">© Esteban Pajares - 2021 </p>
+        <p class="footer-copyright">© Esteban Pajares - 2021</p>
         <div class="social-media">
-          <a target="_blank "href="https://www.instagram.com/Esteban_Pajares/"><img src="./icons/instagram-a.svg" alt="red social de instagram" title="red social de instagram" ></a>
-          <a target="_blank "href="https://twitter.com/Esteban_Pajares"><img src="./icons/twitter-a.svg" alt="red social de witter" title="red social de twitter"></a>
+          <a target="_blank "href="https://www.instagram.com/Esteban_Pajares/"><img src="./icons/instagram.svg" alt="red social de instagram" title="red social de instagram" ></a>
+          <a target="_blank "href="https://twitter.com/Esteban_Pajares"><img src="./icons/twitter.svg" alt="red social de twitter" title="red social de twitter Twitter"></a>
           <!-- <a target="_blank "href="#"><img src="./icons/facebook.svg" alt="Logo de Facebook" title="Logo de Facebook Facebook"></a> -->
         </div>
       </div>
