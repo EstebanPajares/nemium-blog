@@ -125,9 +125,9 @@ nav details summary {
   color: var(--gray);
 }
 
-.nav-content li:first-of-type{
+/* .nav-content li:first-of-type{
   background: var(--light-blue);
-}
+} */
 
 .nav-content details ol li:hover{
   background: var(--light-blue);
