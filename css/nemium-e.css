@@ -149,9 +149,9 @@ hr {
 pre {
   padding: 40px;
   overflow: auto; /* genera un scroll */
-  border-radius: 8px;
+  /* border-radius: 8px;
   border: 10px solid var(--pink);
-  box-shadow: -10px 10px 0 0 var(--verysoftblue);
+  box-shadow: -10px 10px 0 0 var(--verysoftblue); */
 }
 
 p{
